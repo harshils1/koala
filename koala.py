@@ -153,6 +153,15 @@ class BinOpNode:
         return f'({self.left_node}, {self.op_tok}, {self.right_node})'
 
 
+class ParseResult:
+    def __init__(self):
+        self.error = None
+        self.node = None
+
+    def register(self, res):
+        pass
+
+
 class Parser:
     def __init__(self, tokens):
         self.tokens = tokens
